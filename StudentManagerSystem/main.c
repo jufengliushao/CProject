@@ -7,9 +7,15 @@
 //
 
 #include <stdio.h>
-
+#include "PrintMethods.h"
+#include "GetterDataMethods.h"
+#include "MainFunctions.h"
+#include <stdlib.h>
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
+    char ch;
+    print_menu();
+    ch = getter_setpInfo();
+    main_switchMethods(ch);
     return 0;
 }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		85C5D3822068869D007ED501 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D3812068869D007ED501 /* main.c */; };
+		85C5D38B20688868007ED501 /* PrintMethods.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D38A20688868007ED501 /* PrintMethods.c */; };
+		85C5D38F20689ED8007ED501 /* GetterDataMethods.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D38E20689ED8007ED501 /* GetterDataMethods.c */; };
+		85C5D3922068BB36007ED501 /* MainFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D3912068BB36007ED501 /* MainFunctions.c */; };
+		85C5D3952068BF5C007ED501 /* SignalListManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D3942068BF5C007ED501 /* SignalListManager.c */; };
+		85C5D3992068BFE2007ED501 /* Student.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D3982068BFE2007ED501 /* Student.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,17 @@
 /* Begin PBXFileReference section */
 		85C5D37E2068869D007ED501 /* StudentManagerSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StudentManagerSystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C5D3812068869D007ED501 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		85C5D38A20688868007ED501 /* PrintMethods.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PrintMethods.c; sourceTree = "<group>"; };
+		85C5D38C20688AE2007ED501 /* PrintMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrintMethods.h; sourceTree = "<group>"; };
+		85C5D38D20689ED8007ED501 /* GetterDataMethods.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetterDataMethods.h; sourceTree = "<group>"; };
+		85C5D38E20689ED8007ED501 /* GetterDataMethods.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GetterDataMethods.c; sourceTree = "<group>"; };
+		85C5D3902068BB36007ED501 /* MainFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainFunctions.h; sourceTree = "<group>"; };
+		85C5D3912068BB36007ED501 /* MainFunctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MainFunctions.c; sourceTree = "<group>"; };
+		85C5D3932068BF5C007ED501 /* SignalListManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignalListManager.h; sourceTree = "<group>"; };
+		85C5D3942068BF5C007ED501 /* SignalListManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SignalListManager.c; sourceTree = "<group>"; };
+		85C5D3972068BFE2007ED501 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		85C5D3982068BFE2007ED501 /* Student.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Student.c; sourceTree = "<group>"; };
+		85C5D39A2068C5E9007ED501 /* CommonSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonSetting.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +74,43 @@
 			isa = PBXGroup;
 			children = (
 				85C5D3812068869D007ED501 /* main.c */,
+				85C5D3902068BB36007ED501 /* MainFunctions.h */,
+				85C5D3912068BB36007ED501 /* MainFunctions.c */,
+				85C5D3962068BFD9007ED501 /* Model */,
+				85C5D38920688855007ED501 /* Common */,
+				85C5D38820688854007ED501 /* ListManager */,
 			);
 			path = StudentManagerSystem;
+			sourceTree = "<group>";
+		};
+		85C5D38820688854007ED501 /* ListManager */ = {
+			isa = PBXGroup;
+			children = (
+				85C5D3932068BF5C007ED501 /* SignalListManager.h */,
+				85C5D3942068BF5C007ED501 /* SignalListManager.c */,
+			);
+			path = ListManager;
+			sourceTree = "<group>";
+		};
+		85C5D38920688855007ED501 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				85C5D38C20688AE2007ED501 /* PrintMethods.h */,
+				85C5D38A20688868007ED501 /* PrintMethods.c */,
+				85C5D38D20689ED8007ED501 /* GetterDataMethods.h */,
+				85C5D38E20689ED8007ED501 /* GetterDataMethods.c */,
+				85C5D39A2068C5E9007ED501 /* CommonSetting.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		85C5D3962068BFD9007ED501 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				85C5D3972068BFE2007ED501 /* Student.h */,
+				85C5D3982068BFE2007ED501 /* Student.c */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C5D38F20689ED8007ED501 /* GetterDataMethods.c in Sources */,
+				85C5D38B20688868007ED501 /* PrintMethods.c in Sources */,
+				85C5D3922068BB36007ED501 /* MainFunctions.c in Sources */,
+				85C5D3952068BF5C007ED501 /* SignalListManager.c in Sources */,
 				85C5D3822068869D007ED501 /* main.c in Sources */,
+				85C5D3992068BFE2007ED501 /* Student.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
