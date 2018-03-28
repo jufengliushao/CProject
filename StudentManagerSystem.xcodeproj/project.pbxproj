@@ -13,6 +13,8 @@
 		85C5D3922068BB36007ED501 /* MainFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D3912068BB36007ED501 /* MainFunctions.c */; };
 		85C5D3952068BF5C007ED501 /* SignalListManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D3942068BF5C007ED501 /* SignalListManager.c */; };
 		85C5D3992068BFE2007ED501 /* Student.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D3982068BFE2007ED501 /* Student.c */; };
+		85C5D39F2068FC7B007ED501 /* FileManager.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C5D39E2068FC7B007ED501 /* FileManager.c */; };
+		85CA1EE4206BE2A7008A3C73 /* SignalListProblem.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CA1EE3206BE2A7008A3C73 /* SignalListProblem.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,10 @@
 		85C5D3972068BFE2007ED501 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		85C5D3982068BFE2007ED501 /* Student.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Student.c; sourceTree = "<group>"; };
 		85C5D39A2068C5E9007ED501 /* CommonSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonSetting.h; sourceTree = "<group>"; };
+		85C5D39D2068FC7B007ED501 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		85C5D39E2068FC7B007ED501 /* FileManager.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FileManager.c; sourceTree = "<group>"; };
+		85CA1EE2206BE2A7008A3C73 /* SignalListProblem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignalListProblem.h; sourceTree = "<group>"; };
+		85CA1EE3206BE2A7008A3C73 /* SignalListProblem.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SignalListProblem.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,8 @@
 				85C5D3812068869D007ED501 /* main.c */,
 				85C5D3902068BB36007ED501 /* MainFunctions.h */,
 				85C5D3912068BB36007ED501 /* MainFunctions.c */,
+				85CA1EE0206BE28E008A3C73 /* LeetCode */,
+				85C5D39B2068FB8F007ED501 /* Source */,
 				85C5D3962068BFD9007ED501 /* Model */,
 				85C5D38920688855007ED501 /* Common */,
 				85C5D38820688854007ED501 /* ListManager */,
@@ -99,6 +107,8 @@
 				85C5D38A20688868007ED501 /* PrintMethods.c */,
 				85C5D38D20689ED8007ED501 /* GetterDataMethods.h */,
 				85C5D38E20689ED8007ED501 /* GetterDataMethods.c */,
+				85C5D39D2068FC7B007ED501 /* FileManager.h */,
+				85C5D39E2068FC7B007ED501 /* FileManager.c */,
 				85C5D39A2068C5E9007ED501 /* CommonSetting.h */,
 			);
 			path = Common;
@@ -111,6 +121,30 @@
 				85C5D3982068BFE2007ED501 /* Student.c */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		85C5D39B2068FB8F007ED501 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		85CA1EE0206BE28E008A3C73 /* LeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				85CA1EE1206BE28E008A3C73 /* ListProblem */,
+			);
+			path = LeetCode;
+			sourceTree = "<group>";
+		};
+		85CA1EE1206BE28E008A3C73 /* ListProblem */ = {
+			isa = PBXGroup;
+			children = (
+				85CA1EE2206BE2A7008A3C73 /* SignalListProblem.h */,
+				85CA1EE3206BE2A7008A3C73 /* SignalListProblem.c */,
+			);
+			path = ListProblem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +207,11 @@
 				85C5D38F20689ED8007ED501 /* GetterDataMethods.c in Sources */,
 				85C5D38B20688868007ED501 /* PrintMethods.c in Sources */,
 				85C5D3922068BB36007ED501 /* MainFunctions.c in Sources */,
+				85C5D39F2068FC7B007ED501 /* FileManager.c in Sources */,
 				85C5D3952068BF5C007ED501 /* SignalListManager.c in Sources */,
 				85C5D3822068869D007ED501 /* main.c in Sources */,
 				85C5D3992068BFE2007ED501 /* Student.c in Sources */,
+				85CA1EE4206BE2A7008A3C73 /* SignalListProblem.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

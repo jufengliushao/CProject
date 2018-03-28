@@ -17,6 +17,12 @@
 void print_String(char s[]);
 
 /**
+ * 打印
+ * s - 需要打印的数据 - 不换行
+ */
+void print_StringNotLine(char s[]);
+
+/**
  * 打印菜单
  */
 void print_menu(void);
@@ -42,8 +48,17 @@ void print_inputErrorID(void);
 void print_inputErrorEmpty(void);
 
 /**
+ * 打印学生学号信息
+ */
+void print_studentIDLog(Student stu);
+
+/**
  * 打印学生信息
  */
 void print_studentInfoLog(Student stu);
 
+/**
+ * 无数据
+ */
+void print_emptyData(void);
 #endif /* PrintMethods_h */

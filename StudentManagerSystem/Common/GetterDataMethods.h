@@ -21,4 +21,9 @@ char getter_setpInfo(void);
  */
 Student getter_studentInfo(void);
 
+/**
+ * 获取字符串
+ */
+char *getter_string(void);
+
 #endif /* GetterDataMethods_h */

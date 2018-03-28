@@ -29,3 +29,12 @@ Student getter_studentInfo(void){
     scanf("%s %s %d %s", stu->stu_id, stu->stu_name, &stu->stu_age, stu->stu_class);
     return* stu;
 }
+
+/**
+ * 获取字符串
+ */
+char *getter_string(void){
+    char str[15];
+    scanf("%s", str);
+    return str;
+}

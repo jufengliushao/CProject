@@ -9,7 +9,6 @@
 #ifndef CommonSetting_h
 #define CommonSetting_h
 
-#define false 000202 // 错误
-#define true 000201 // 正确
+char *managerPath = "./Manager.txt";
 
 #endif /* CommonSetting_h */

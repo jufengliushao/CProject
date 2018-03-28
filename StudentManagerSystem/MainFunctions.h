@@ -34,4 +34,19 @@ void main_menuShow(void);
   * 打印所有数据
   */
 void main_printAll(void);
+
+/**
+ * 打印现有学号
+ */
+void main_printAllNo(void);
+
+/**
+ * 录入管理员
+ */
+void main_addManager(void);
+
+/**
+ * 获取所有管理员
+ */
+void mian_getAllManager(void);
 #endif /* MainFunctions_h */

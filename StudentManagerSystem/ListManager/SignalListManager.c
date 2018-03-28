@@ -9,6 +9,7 @@
 #include "SignalListManager.h"
 #include <stdlib.h>
 #include "PrintMethods.h"
+#include <string.h>
 Node *header;
 int listLength; // 节点长度
 
@@ -82,10 +83,13 @@ void list_insertNode(Node *locNode, Node *node){
  * 判断节点是否存在
  */
 int list_searchNode(Node *node){
+    if (header == NULL) {
+        return 0;
+    }
     Node *no = header->next;
     int flag = 0;
-    while (no->next != NULL && no) {
-        if (no->student.stu_id == node->student.stu_id) {
+    while (no) {
+        if (strcmp(no->student.stu_id, node->student.stu_id) == 0) {
             flag = 1;
             break;
         }
