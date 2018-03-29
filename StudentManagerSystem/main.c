@@ -14,7 +14,8 @@
 #include <stdlib.h>
 int main(int argc, const char * argv[]) {
     // insert code here...
-    lc_firstListProblem();
+//    lc_firstListProblem();
+    lc_secodListProblem();
     /*
     char ch;
     print_menu();

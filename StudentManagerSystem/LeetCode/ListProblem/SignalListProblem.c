@@ -8,10 +8,14 @@
 
 #include "SignalListProblem.h"
 #include <stdlib.h>
+#pragma mark - problem 1
+#pragma mark - --------------------------------satrt-----------------------------------------
 /**
  * 第一题
  * 翻转单链表
  * 不可添加新节点
+ * eg: 1->2->3->4->5
+ * result: 5->4->3->2->1
  */
 void lc_firstListProblem(){
     SignalList *header = lc_firstListProblem_init();
@@ -57,3 +61,38 @@ void lc_firstListProblem_print(SignalList *header){
     }
     printf("\n");
 }
+#pragma mark - --------------------------------end-----------------------------------------
+
+#pragma mark - problem 2
+#pragma mark - --------------------------------satrt-----------------------------------------
+/**
+ * 第二个问题
+ * 对链表中的部分进行翻转，不可添加新的节点
+ * start 起始位置(从1开始计数)
+ * end 结束位置 - 默认参数合法
+ * eg: 1->2->3->4->5->6->7->8 start=1 end=4
+ * result: 4->3->2->1->5->6->7->8
+ */
+void lc_secodListProblem(){
+    SignalList *header = lc_firstListProblem_init()->next;
+    lc_firstListProblem_print(header);
+    int start = 2, end = 5;
+    SignalList *preNode = header, *lastNode = NULL, *node = header, *newNode = NULL;
+    while (preNode && --start) {
+        preNode = node;
+        node = node -> next;
+    }
+    start = 2;
+    while (start++ <= end) {
+        lastNode = node ->next;
+        node->next = newNode;
+        newNode = node;
+        node = lastNode;
+//         lc_firstListProblem_print(node);
+    }
+   
+    preNode->next->next = node;
+    preNode->next = newNode;
+    lc_firstListProblem_print(header);
+}
+#pragma mark - --------------------------------end-----------------------------------------
