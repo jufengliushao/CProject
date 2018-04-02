@@ -15,7 +15,8 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
 //    lc_firstListProblem();
-    lc_secodListProblem();
+//    lc_secodListProblem();
+    lc_thirdListProblem();
     /*
     char ch;
     print_menu();

@@ -17,7 +17,7 @@
  * eg: 1->2->3->4->5
  * result: 5->4->3->2->1
  */
-void lc_firstListProblem(){
+void lc_firstListProblem(void){
     SignalList *header = lc_firstListProblem_init();
     lc_firstListProblem_print(header->next);
     SignalList *preNode = NULL, *lastNode;
@@ -36,7 +36,7 @@ void lc_firstListProblem(){
  * 初始化链表
  * 返回头结点
  */
-SignalList * lc_firstListProblem_init(){
+SignalList * lc_firstListProblem_init(void){
     SignalList *header = (SignalList *)malloc(sizeof(SignalList));
     int a[] = {2, 3, 5, 6, 8, 9};
     SignalList *preNode = header;
@@ -73,7 +73,7 @@ void lc_firstListProblem_print(SignalList *header){
  * eg: 1->2->3->4->5->6->7->8 start=1 end=4
  * result: 4->3->2->1->5->6->7->8
  */
-void lc_secodListProblem(){
+void lc_secodListProblem(void){
     SignalList *header = lc_firstListProblem_init()->next;
     lc_firstListProblem_print(header);
     int start = 2, end = 5;
@@ -88,11 +88,62 @@ void lc_secodListProblem(){
         node->next = newNode;
         newNode = node;
         node = lastNode;
-//         lc_firstListProblem_print(node);
     }
    
     preNode->next->next = node;
     preNode->next = newNode;
     lc_firstListProblem_print(header);
+}
+#pragma mark - --------------------------------end-----------------------------------------
+
+#pragma mark - problem 3
+#pragma mark - --------------------------------satrt-----------------------------------------
+/**
+ * 第三个问题
+ * 判断当前是否有环
+ * 思路：
+ * 采用快慢指针的方法，当快指针与慢指针重合时，就存在环
+ * 当快指针->NULL时，不存在环
+ * 快指针比慢指针快一个节点
+ */
+void lc_thirdListProblem(void){
+    SignalList *header = lc_thirdListProblem_init();
+    SignalList *slowNode = header, *fastNode = header->next;
+    while (slowNode != fastNode && fastNode->next) {
+        slowNode = slowNode->next;
+        fastNode = fastNode->next->next;
+    }
+    if (fastNode->next) {
+        // 重合存在环
+        printf("此链表存在环\n");
+    }else{
+        // 不存在环
+        printf("此链表不存在环\n");
+    }
+}
+
+/**
+ * 初始化具有环的单链表
+ */
+SignalList *lc_thirdListProblem_init(void){
+    int a[] = {1, 2, 3, 4, 5, 6, 7, 8};
+    int end = 3;
+    SignalList *header = (SignalList *)malloc(sizeof(SignalList));
+    header->data = 0;
+    header->next = NULL;
+    SignalList *pre = header;
+    for (int i = 0; i < 8; i ++) {
+        SignalList *node = (SignalList *)malloc(sizeof(SignalList));
+        node->data = a[i];
+        node->next = NULL;
+        pre->next = node;
+        pre = node;
+    }
+    SignalList *pree = header;
+    while (end --) {
+        pree = pree->next;
+    }
+    pre -> next = pree;
+    return header;
 }
 #pragma mark - --------------------------------end-----------------------------------------

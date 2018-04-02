@@ -23,7 +23,7 @@ typedef struct lc_signalList{
  * eg: 1->2->3->4->5
  * result: 5->4->3->2->1
  */
-SignalList * lc_firstListProblem_init();
+SignalList * lc_firstListProblem_init(void);
 
 /**
  * 打印所有数据
@@ -36,7 +36,7 @@ void lc_firstListProblem_print(SignalList *header);
  * 翻转单链表
  * 不可添加新节点
  */
-void lc_firstListProblem();
+void lc_firstListProblem(void);
 
 /**
  * 第二个问题
@@ -46,6 +46,21 @@ void lc_firstListProblem();
  * eg: 1->2->3->4->5->6->7->8 start=1 end=4
  * result: 4->3->2->1->5->6->7->8
  */
-void lc_secodListProblem();
+void lc_secodListProblem(void);
+
+/**
+ * 初始化具有环的单链表
+ */
+SignalList *lc_thirdListProblem_init(void);
+
+/**
+ * 第三个问题
+ * 判断当前是否有环
+ * 思路：
+ * 采用快慢指针的方法，当快指针与慢指针重合时，就存在环
+ * 当快指针->NULL时，不存在环
+ * 快指针比慢指针快一个节点
+ */
+void lc_thirdListProblem(void);
 
 #endif /* SignalListProblem_h */
