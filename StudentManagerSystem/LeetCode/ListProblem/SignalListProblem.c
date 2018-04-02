@@ -109,7 +109,7 @@ void lc_secodListProblem(void){
 void lc_thirdListProblem(void){
     SignalList *header = lc_thirdListProblem_init();
     SignalList *slowNode = header, *fastNode = header->next;
-    while (slowNode != fastNode && fastNode->next) {
+    while (slowNode != fastNode && fastNode->next->next) {
         slowNode = slowNode->next;
         fastNode = fastNode->next->next;
     }
@@ -145,5 +145,40 @@ SignalList *lc_thirdListProblem_init(void){
     }
     pre -> next = pree;
     return header;
+}
+#pragma mark - --------------------------------end-----------------------------------------
+
+#pragma mark - problem 4
+#pragma mark - --------------------------------satrt-----------------------------------------
+/**
+ * 第四个问题
+ * 判断当前是否有环，有环返回起始节点，没有返回NULL
+ * 思路：
+ * 采用快慢指针的方法，当快指针与慢指针重合时，就存在环
+ * 当快指针->NULL时，不存在环
+ * 快指针比慢指针快一个节点
+ */
+SignalList * lc_forthListProblem(void){
+    SignalList *header = lc_thirdListProblem_init();
+    SignalList *slowNode = header, *fastNode = header->next;
+    while (slowNode != fastNode && fastNode->next->next) {
+        slowNode = slowNode->next;
+        fastNode = fastNode->next->next;
+    }
+    if (fastNode->next) {
+        // 重合存在环
+        printf("此链表存在环\n");
+    }else{
+        // 不存在环
+        printf("此链表不存在环\n");
+        return NULL;
+    }
+    fastNode = header;
+    slowNode = slowNode -> next;
+    while (fastNode != slowNode) {
+        slowNode = slowNode -> next;
+        fastNode = fastNode -> next;
+    }
+    return fastNode;
 }
 #pragma mark - --------------------------------end-----------------------------------------

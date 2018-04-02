@@ -63,4 +63,14 @@ SignalList *lc_thirdListProblem_init(void);
  */
 void lc_thirdListProblem(void);
 
+/**
+ * 第四个问题
+ * 判断当前是否有环，有环返回起始节点，没有返回NULL
+ * 思路：
+ * 采用快慢指针的方法，当快指针与慢指针重合时，就存在环
+ * 当快指针->NULL时，不存在环
+ * 快指针比慢指针快一个节点
+ */
+SignalList * lc_forthListProblem(void);
+
 #endif /* SignalListProblem_h */
