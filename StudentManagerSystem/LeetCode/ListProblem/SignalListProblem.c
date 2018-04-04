@@ -182,3 +182,97 @@ SignalList * lc_forthListProblem(void){
     return fastNode;
 }
 #pragma mark - --------------------------------end-----------------------------------------
+
+#pragma mark - problem 5
+#pragma mark - --------------------------------satrt-----------------------------------------
+/**
+ * 第五个问题
+ * 找到两个单链表的相交节点
+ * 要求 空间复杂度无O(1) 时间复杂度为O(n)
+ * 思路：
+ * 找到两个节点的较小节点，并将较长链表的头指针与短链表对齐
+ * 然后同时进行寻找，当找到一样的节点时，即为焦点
+ */
+void lc_fifthListProblem(void){
+    SignalList *headA = (SignalList *)malloc(sizeof(SignalList));
+    SignalList *headB = (SignalList *)malloc(sizeof(SignalList));
+    SignalList *minNode = headA, *maxNode = headB;
+    int lengthA = 0, lengthB = 0, mini = 0, max = 0, diff = 0;
+    headA->data = headB->data = 0;
+    headA->next = headB->next = NULL;
+    lc_fifthListProblem_init(headA, headB);
+    lc_firstListProblem_print(headA);
+    lc_firstListProblem_print(headB);
+    lengthA = lc_fifthListProblem_length(headA->next);
+    lengthB = lc_fifthListProblem_length(headB->next);
+    mini = lengthB > lengthA ? lengthA : lengthB;
+    max = lengthB < lengthA ? lengthA : lengthB;
+    minNode = lengthB > lengthA ? headB : headA;
+    maxNode = lengthB < lengthA ? headB : headA;
+    diff = max - mini;
+    while (diff --) {
+        minNode = minNode ->next;
+    }
+    lc_firstListProblem_print(minNode);
+    while (minNode && maxNode) {
+        minNode = minNode -> next;
+        maxNode = maxNode -> next;
+        if (minNode == maxNode) {
+            break;
+        }
+    }
+    printf("%p:%d\n", minNode, minNode->data);
+}
+
+/**
+ * 链表初始化
+ * 初始化两个具有相交节点的链表
+ * headerA - 链表A
+ * headerB - 链表B
+ */
+void lc_fifthListProblem_init(SignalList *headerA, SignalList *headerB){
+    int a[] = {2, 3, 4, 5, 6};
+    int b[] = {7, 8, 9};
+    int c[] = {10, 11, 12};
+    SignalList *head = headerA;
+    for (int i = 0; i < 5; i ++) {
+        SignalList *node = (SignalList *)malloc(sizeof(SignalList));
+        node->data = a[i];
+        node->next = NULL;
+        head -> next = node;
+        head = node;
+    }
+    SignalList *headb = headerB;
+    for (int i = 0; i < 3; i ++) {
+        SignalList *node = (SignalList *)malloc(sizeof(SignalList));
+        node->data = b[i];
+        node->next = NULL;
+        headb -> next = node;
+        headb = node;
+    }
+    SignalList *headG = (SignalList *)malloc(sizeof(SignalList));
+    headG->next = NULL;
+    headG->data = 0;
+    SignalList *hedd = headG;
+    for (int i = 0; i < 3; i ++) {
+        SignalList *node = (SignalList *)malloc(sizeof(SignalList));
+        node->data = c[i];
+        node->next = NULL;
+        headG -> next = node;
+        headG = node;
+    }
+    headb->next = head->next = hedd->next;
+}
+
+/**
+ * 计算链表的长度
+ */
+int lc_fifthListProblem_length(SignalList *head){
+    int length = 0;
+    while (head) {
+        length ++;
+        head = head->next;
+    }
+    return length;
+}
+#pragma mark - --------------------------------end-----------------------------------------

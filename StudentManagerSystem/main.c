@@ -17,7 +17,8 @@ int main(int argc, const char * argv[]) {
 //    lc_firstListProblem();
 //    lc_secodListProblem();
 //    lc_thirdListProblem();
-    lc_forthListProblem();
+//    lc_forthListProblem();
+    lc_fifthListProblem();
     /*
     char ch;
     print_menu();

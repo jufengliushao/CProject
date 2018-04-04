@@ -73,4 +73,27 @@ void lc_thirdListProblem(void);
  */
 SignalList * lc_forthListProblem(void);
 
+/**
+ * 第五个问题
+ * 找到两个单链表的相交节点
+ * 要求 空间复杂度无O(1) 时间复杂度为O(n)
+ * 思路：
+ * 找到两个节点的较小节点，并将较长链表的头指针与短链表对齐
+ * 然后同时进行寻找，当找到一样的节点时，即为焦点
+ */
+void lc_fifthListProblem(void);
+
+/**
+ * 链表初始化
+ * 初始化两个具有相交节点的链表
+ * headerA - 链表A
+ * headerB - 链表B
+ */
+void lc_fifthListProblem_init(SignalList *headerA, SignalList *headerB);
+
+/**
+ * 计算链表的长度
+ */
+int lc_fifthListProblem_length(SignalList *head);
+
 #endif /* SignalListProblem_h */
